@@ -52,5 +52,5 @@ plt.title("Trayectoria para distintos vientos")
 plt.xlabel("X (m)")
 plt.ylabel("Y (m)")
 plt.legend(["V = 0 m/s", "V = 10 m/s", "V = 20 m/s"]) 
-plt.savefig('foo.png')
-plt.show()
+plt.savefig('balistica.png')
+
