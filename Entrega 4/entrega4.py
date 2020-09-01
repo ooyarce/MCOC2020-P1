@@ -20,7 +20,7 @@ z0 = [x0,v0]
 function = np.exp(-c*t/2)*np.cos(w*t)
 plt.plot(t,function,color = 'black',linewidth=2,label = 'analytical solution')
 
-#solución 
+#solución odeint
 def zpunto(z,t):
     zp = np.zeros(2)
     zp[0] = z[1]
