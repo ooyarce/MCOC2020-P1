@@ -18,8 +18,6 @@ Respecto a la primera fila, el gráfico de la izquierda muestra la gráfica de l
 Para encontrar eso, probé con diferentes valores, 10,100,150,200,250,270,300,500, y 1000. El más eficiente se encontraba en el N = 1000, con un pequeño margen de error al inicio pero con un margen del 2% de error al final. Por ende podemos decir con certeza de que el numero N de subdivisiones suficiente para encontrar un error menor al 1% fluctúa entre 1500 y 2000 Esto se traduce en que no hay forma de acomodar en una forma 100% la órbita satélital usando odeint natural, pero sí con el eulerint, con un grandísimo número de Nsubintervalos. El tiempo de ejecucción fue excesivamente grande y fue de: 1343.83 segundos (22 minutos aproximadamente).
 
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/eulerint_100_it.png?raw=true)
-![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/ploteo5.png?raw=true)
-![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/ploteo4.png?raw=true)
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/eulerint_1000_it.png?raw=true)
 
 **-(5pt) Implemente las correcciones J2 y J3. Repita los gráficos de arriba para su caso particular. ¿Cuánta deriva incurre al agregar las correcciones J2 y J3? ¿Cuanto se demora su código en correr?**
