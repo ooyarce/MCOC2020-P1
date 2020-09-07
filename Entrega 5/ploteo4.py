@@ -2,7 +2,7 @@ from scipy.integrate import odeint
 import  matplotlib.pylab as plt
 import numpy as sp
 from eof import leer_eof
-
+from time import perf_counter
 #parametros
 G = 6.67*10**-11 #Nm^2/kg^2
 mt = 5.98*10**24 #kg 
@@ -50,7 +50,7 @@ def zpunto(z,t):
     
     #defino mi vector zp 
     zp[0:3] = z[3:6] 
-    zp[3:6]= (-G*mt/r**3)*z[0:3]  - R.T@(dR2_dt2@z[0:3] + 2*dR_dt@z[3:6])
+    zp[3:6]= (-G*mt/r**3)*z[0:3]  - R.T@(dR2_dt2@z[0:3] + 2*dR_dt@z[3:6]) + FJ2+FJ3
     return zp
 
 #solución euler
@@ -73,11 +73,13 @@ t, x, y, z, vx, vy, vz = leer_eof('S1B_OPER_AUX_POEORB_OPOD_20200816T110726_V202
 z0 = sp.array([x[0],y[0],z[0],vx[0],vy[0],vz[0]]) #condicion de borde inicial
 
 #puntos de predicción
+t1 = perf_counter()
 sol = odeint(zpunto,z0,t)
+t2 = perf_counter()
 x_sol = sol[:,0]
 y_sol = sol[:,1]
 z_sol = sol[:,2]
-
+print (t2-t1)
 zp = sol[:,:] 
 sol2 = eulerint(zp,z0,t,Nsubdivisiones = 1)
 x_euler = sol2[:,0]
@@ -90,6 +92,6 @@ print (delta.max()/1000)
 plt.plot(t/3600,delta/1000)
 plt.ylabel('Deriva, δ (KM)')
 plt.xlabel('Tiempo, t (horas)')
-plt.title('Distancia entre posición real y predicha, $δ_{max}$ = 2940.43 (km)')
+plt.title('Distancia entre posición real y predicha, $δ_{max}$ = 866.38.43 (km)')
 plt.savefig('ploteobasediagonal.png')
 plt.show()

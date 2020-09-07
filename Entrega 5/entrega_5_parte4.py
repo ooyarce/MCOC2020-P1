@@ -16,23 +16,6 @@ def zpunto(z,t):
     z1 = z[0:3]
     r2 = sp.dot(z1,z1)
     r = sp.sqrt(r2)
-    J2 = 1.75553*(10**10)*1000**5
-    J3 = -2.61913*(10**11)*1000**6
-    u = z[0]#x
-    v = z[1]#y
-    w = z[2]#z
-    
-    #defino mis valores de F
-    Fx_J2 = J2*(u/r**7)*(6*w**2-3/2*(u**2+v**2))
-    Fy_J2 = J2*(v/r**7)*(6*w**2-3/2*(u**2+v**2))
-    Fz_J2 = J2*(w/r**7)*(3*w**2-9/2*(u**2+v**2))
-    FJ2 = sp.array([Fx_J2,Fy_J2,Fz_J2])
-    
-    Fx_J3 = J3*u*w/r**9*(10*w**2-15/2*(u**2+v**2))
-    Fy_J3 = J3*v*w/r**9*(10*w**2-15/2*(u**2+v**2))
-    Fz_J3 = J3/r**9*(4*w**2*(w**2-3*(u**2+v**2))+3/2*(u**2+v**2)**2)
-    FJ3 = sp.array([Fx_J3,Fy_J3,Fz_J3])
-    
     #defino mis matrices de rotación
     R = sp.array([
         [cos,-sin,0],
