@@ -13,7 +13,7 @@ El gráfico de la izquierda muestra la gráfica de la deriva del eulerint (azul)
 
 **-(3pt) ¿Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? Grafique la deriva en el tiempo. Comente con respecto del tiempo de ejecución de eulerint ahora.**
 
-Para encontrar eso, probé con diferentes valores, 10,100,150,200,250,270,300,500, y 1000. El más eficiente se encontraba en el N = 3000, con un pequeño margen de error al inicio pero con un alto margen de error al final. Esto se traduce en que no hay forma de acomodar en una forma 100% la órbita satélital usando odeint natural, pero sí con el eulerint, con un grandísimo número de Nsubintervalos. El tiempo de ejecucción fue excesivamente grande y fue de: 1343.83 segundos (22 minutos aproximadamente).
+Para encontrar eso, probé con diferentes valores, 10,100,150,200,250,270,300,500, y 1000. El más eficiente se encontraba en el N = 1000, con un pequeño margen de error al inicio pero con un alto margen de error al final. Esto se traduce en que no hay forma de acomodar en una forma 100% la órbita satélital usando odeint natural, pero sí con el eulerint, con un grandísimo número de Nsubintervalos. El tiempo de ejecucción fue excesivamente grande y fue de: 1343.83 segundos (22 minutos aproximadamente).
 
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/eulerint_1000_it.png?raw=true)
 
