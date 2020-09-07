@@ -7,6 +7,7 @@
 **- (5pt) Usando la condición inicial (primer OSV) de su archivo, compare la solución entre odeint y eulerint. Use Nsubdiviciones=1. Grafíque la deriva en el tiempo como arriba ¿Cuánto deriva eulerint de odeint en este caso al final del tiempo? (Esta pregunta solo compara algoritmos, no se usa más que la condición inicial del archivo EOF). ¿Cuanto se demora odeint y eulerint respectivamente en producir los resultados?**
 
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/ploteo3.png?raw=true)
+![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/plote_optimizado2.png?raw=true)
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/ploteobasediagonal.png?raw=true)
 
 El gráfico de la izquierda muestra la gráfica de la deriva del eulerint (azul) versus la gráfica del odeint (naranjo). El gráfico de la derecha muestra la deriva de la odeint. La deriva entre eulerint y odeint está dada por 17942.38 kilómetros. Es decir, Eulerint con 1 iteración de Nsubdivisiones es muchísimo menos eficiente que odeint. Respectivamente, odeint y eulerint demoran 0.18 segundos y 0.49 segundos, mostrando nuevamente que odeint es mejor.
