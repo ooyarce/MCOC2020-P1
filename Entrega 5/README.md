@@ -8,3 +8,7 @@
 
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/ploteo3.png?raw=true)
 ![alt_text](https://github.com/ooyarce/MCOC2020-P1/blob/master/Entrega%205/ploteobasediagonal.png?raw=true)
+
+La deriva entre eulerint y odeint está dada por 17942.38 kilómetros. Es decir, Eulerint con 1 iteración de Nsubdivisiones es muchísimo menos eficiente que odeint. Respectivamente, odeint y eulerint demoran 0.18 segundos y 0.49 segundos, mostrando nuevamente que odeint es mejor.
+
+**-(3pt) ¿Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? Grafique la deriva en el tiempo. Comente con respecto del tiempo de ejecución de eulerint ahora. 
