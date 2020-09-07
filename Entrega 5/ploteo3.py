@@ -76,7 +76,8 @@ z_euler = sol2[:,2]
 delta = sp.sqrt((x-x_sol)**2+(y-y_sol)**2+(z-z_sol)**2)
 delta2 = sp.sqrt((x-x_euler)**2+(y-y_euler)**2+(z-z_euler)**2)
 max1 = delta2.max()/1000
-print(max1)
+max2 = delta.max()/1000
+print(max1-max2)
 plt.plot(t/3600,delta2/1000)
 plt.plot(t/3600,delta/1000)
 plt.ylabel('Deriva, δ (KM)')
