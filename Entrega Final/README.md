@@ -1,1 +1,1 @@
-
+Probé implementar los coeficiente J2 hasta el J8 pero me di cuenta que la precisión usando los C y S era muy imprecisa y solo empeoraba el margen de error. Dado que implementando toda la ecuación de la derivada u con los términos anteriormente mencionados no era para nada cercano a la órbita real, decidí no usarlos y quedarme con el resultado del J2 Y J3 nomás, ya que éste me da un error de cerca de 800km mientras que con la otra implentación los valores eran enormes (3e20 aprox). 
